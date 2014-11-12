@@ -1,0 +1,42 @@
+development:
+  adapter: in_memory
+  repositories:
+    '1743':
+      adapter: soap
+      username: <%= ENV['WEATHER_API_USERNAME'].inspect %> 
+      password: <%= ENV['WEATHER_API_PASSWORD'].inspect %> 
+      path: <%= ENV['WEATHER_API_PATH'].inspect %> 
+      create: <%= ENV['WEATHER_API_CREATE'].inspect %> 
+      read: <%= ENV['WEATHER_API_READ'].inspect %> 
+      update: <%= ENV['WEATHER_API_UPDATE'].inspect %> 
+      delete: <%= ENV['WEATHER_API_DELETE'].inspect %> 
+      all: <%= ENV['WEATHER_API_ALL'].inspect %> 
+ 
+test:
+  adapter: in_memory
+  repositories:
+    '1743':
+      adapter: in_memory
+      username: <%= ENV['WEATHER_API_USERNAME'].inspect %> 
+      password: <%= ENV['WEATHER_API_PASSWORD'].inspect %> 
+      path: <%= ENV['WEATHER_API_PATH'].inspect %> 
+      create: <%= ENV['WEATHER_API_CREATE'].inspect %> 
+      read: <%= ENV['WEATHER_API_READ'].inspect %> 
+      update: <%= ENV['WEATHER_API_UPDATE'].inspect %> 
+      delete: <%= ENV['WEATHER_API_DELETE'].inspect %> 
+      all: <%= ENV['WEATHER_API_ALL'].inspect %> 
+ 
+production:
+  adapter: in_memory
+  repositories:
+    '1743':
+      adapter: soap
+      username: <%= ENV['WEATHER_API_USERNAME'].inspect %> 
+      password: <%= ENV['WEATHER_API_PASSWORD'].inspect %> 
+      path: <%= ENV['WEATHER_API_PATH'].inspect %> 
+      create: <%= ENV['WEATHER_API_CREATE'].inspect %> 
+      read: <%= ENV['WEATHER_API_READ'].inspect %> 
+      update: <%= ENV['WEATHER_API_UPDATE'].inspect %> 
+      delete: <%= ENV['WEATHER_API_DELETE'].inspect %> 
+      all: <%= ENV['WEATHER_API_ALL'].inspect %> 
+ 

@@ -1,0 +1,18 @@
+%ul.breadcrumb
+  %li
+    = link_to 'Home', admin_root_path
+    
+  %li
+    
+    = link_to 'Weather by zips', admin_weather_by_zips_path
+    
+    
+  %li
+    = link_to 'Weather by zip', admin_weather_by_zip_path(@weather_by_zip)
+    
+  %li.active Edit
+
+.page-header
+  %h1 Edit Weather by zip
+
+= render 'form'

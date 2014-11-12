@@ -1,0 +1,58 @@
+.row
+  .col-md-3
+    = render partial: 'admin/admin_sidebar', locals: { active: 'weather_by_zips' }
+  .col-md-9
+    %ul.breadcrumb
+      %li
+        = link_to 'Home', admin_root_path
+      %li.active Weather By Zips
+    
+    .page-header
+      %h1 Weather By Zips
+      %a.btn.btn-primary{href: new_admin_weather_by_zip_path}
+        %i.fa.fa-plus
+        New
+
+    - unless @weather_by_zips.empty?
+      = table do
+        %thead
+          %tr
+            
+            
+            
+            
+            %th Get City Weather By Zip
+            
+            
+            
+            %th Get City Weather By Zip Response
+            
+            
+            %td
+        %tbody
+          - @weather_by_zips.each do |weather_by_zip|
+            %tr
+              
+              
+              
+              
+              %td= link_to (weather_by_zip.get_city_weather_by_zip or ''), admin_weather_by_zip_path(weather_by_zip)
+              
+              
+              
+              %td= link_to (weather_by_zip.get_city_weather_by_zip_response or ''), admin_weather_by_zip_path(weather_by_zip)
+              
+              
+              %td.text-center
+                %a{href: edit_admin_weather_by_zip_path(weather_by_zip), rel: 'tooltip', title: 'Edit'}
+                  %i.fa.fa-pencil
+                &nbsp;
+                &nbsp;
+                %a{href: admin_weather_by_zip_path(weather_by_zip), data: {confirm: 'Are you sure?', method: 'delete'}, rel: 'tooltip nofollow', title: 'Delete'}
+                  %i.fa.fa-trash-o
+      
+    - else
+      .alert
+        %h4 No Weather by zips yet
+        There are no Weather by zips to list.
+        = link_to 'Create a new one', new_admin_weather_by_zip_path, class: 'btn btn-mini'

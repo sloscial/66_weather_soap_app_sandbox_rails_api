@@ -1,0 +1,31 @@
+%ul.breadcrumb
+  %li
+    = link_to 'Home', admin_root_path
+    
+  %li
+    
+    = link_to 'Weather by zips', admin_weather_by_zips_path
+    
+    
+  %li.active Weather by zip
+
+.page-header
+  %h1 Weather by zip
+  %a.btn.btn-primary{href: edit_admin_weather_by_zip_path(@weather_by_zip)}
+    %i.fa.fa-pencil
+    Edit
+
+= table do
+  
+  %tr
+    %td Id
+    %td= @weather_by_zip.id
+  
+  %tr
+    %td Get City Weather By Zip
+    %td= @weather_by_zip.get_city_weather_by_zip
+  
+  %tr
+    %td Get City Weather By Zip Response
+    %td= @weather_by_zip.get_city_weather_by_zip_response
+  
