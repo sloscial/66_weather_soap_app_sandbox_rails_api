@@ -20,11 +20,17 @@ namespace :v2 do
       
     end # v2
 
-    namespace :v3 do
+namespace :v3 do
       
         resources :weather_by_zips
       
     end # v3
+
+    namespace :v4 do
+      
+        resources :weather_by_zips
+      
+    end # v4
 
     # Mount rails engine gems.
     
