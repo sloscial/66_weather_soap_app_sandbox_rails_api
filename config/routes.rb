@@ -14,11 +14,17 @@ WeatherSoapApp::Application.routes.draw do
       
     end # v1
 
-    namespace :v2 do
+namespace :v2 do
       
         resources :weather_by_zips
       
     end # v2
+
+    namespace :v3 do
+      
+        resources :weather_by_zips
+      
+    end # v3
 
     # Mount rails engine gems.
     
