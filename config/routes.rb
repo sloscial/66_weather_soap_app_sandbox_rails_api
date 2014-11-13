@@ -8,13 +8,7 @@ WeatherSoapApp::Application.routes.draw do
     end
   apipie
   namespace :api do
-    namespace :v6 do
-      
-        resources :weather_by_zips
-      
-    end # v6
-
-namespace :v7 do
+    namespace :v7 do
       
         resources :weather_by_zips
       
@@ -32,11 +26,17 @@ namespace :v9 do
       
     end # v9
 
-    namespace :v10 do
+namespace :v10 do
       
         resources :weather_by_zips
       
     end # v10
+
+    namespace :v11 do
+      
+        resources :weather_by_zips
+      
+    end # v11
 
     # Mount rails engine gems.
     
