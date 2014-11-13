@@ -21,11 +21,11 @@
             
             
             
-            %th Get City Weather By Zip
+            %th Weather Return
             
             
             
-            %th Get City Weather By Zip Response
+            %th Zip Code
             
             
             %td
@@ -36,11 +36,11 @@
               
               
               
-              %td= link_to (weather_by_zip.get_city_weather_by_zip or ''), admin_weather_by_zip_path(weather_by_zip)
+              %td= link_to (weather_by_zip.weather_return or ''), admin_weather_by_zip_path(weather_by_zip)
               
               
               
-              %td= link_to (weather_by_zip.get_city_weather_by_zip_response or ''), admin_weather_by_zip_path(weather_by_zip)
+              %td= link_to (weather_by_zip.zip_code or ''), admin_weather_by_zip_path(weather_by_zip)
               
               
               %td.text-center
