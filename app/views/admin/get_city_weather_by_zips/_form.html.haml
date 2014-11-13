@@ -1,0 +1,22 @@
+= simple_form_for(@get_city_weather_by_zip, :html => {class: 'form-horizontal'}, as: :get_city_weather_by_zip, url: @get_city_weather_by_zip.new? ? admin_get_city_weather_by_zips_path : admin_get_city_weather_by_zip_path(@get_city_weather_by_zip)) do |f|
+  = f.error_notification
+  
+  
+
+  
+  
+  
+  = f.input :get_city_weather_by_zip_result, required: false
+  
+  
+  
+  
+  = f.input :zip_code, required: false
+  
+  
+  
+  .form-actions
+    = btn_submit f, 'Submit'
+    
+    = link_to 'Cancel', admin_get_city_weather_by_zips_path, class: 'btn'
+    

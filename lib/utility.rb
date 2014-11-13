@@ -7,7 +7,7 @@ module Utility
 
   # This method returns the latest build version
   def self.latest_api_version
-    11
+    12
   end
 
   # Builds hash for +serializable_hash+ method with nested relation given.

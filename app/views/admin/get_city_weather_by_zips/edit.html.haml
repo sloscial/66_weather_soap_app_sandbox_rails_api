@@ -1,0 +1,18 @@
+%ul.breadcrumb
+  %li
+    = link_to 'Home', admin_root_path
+    
+  %li
+    
+    = link_to 'Get city weather by zips', admin_get_city_weather_by_zips_path
+    
+    
+  %li
+    = link_to 'Get city weather by zip', admin_get_city_weather_by_zip_path(@get_city_weather_by_zip)
+    
+  %li.active Edit
+
+.page-header
+  %h1 Edit Get city weather by zip
+
+= render 'form'
